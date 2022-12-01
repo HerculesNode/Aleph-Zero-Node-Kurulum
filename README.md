@@ -1,10 +1,10 @@
 ##  AlephZero Kurulum Rehberi
 
-## 🟢 ilk olarak Güncelleme yapacağız.
+# 🟢 ilk olarak Güncelleme yapacağız.
 ```
 sudo apt update && sudo apt upgrade -y
 ```
-## 🟢 Kurulumları yapıyoruz
+# 🟢 Kurulumları yapıyoruz
 ```
 sudo apt install git -y
 ```
@@ -14,12 +14,12 @@ sudo apt install screen -y
 ```
 sudo apt-get install docker.io -y
 ```
-## 🟢 NodeRunner dosyasını klonluyoruz
+# 🟢 NodeRunner dosyasını klonluyoruz
 ```
 git clone https://github.com/Cardinal-Cryptography/aleph-node-runner
 cd aleph-node-runner
 ```
-## 🟢 Screen açıp nodemizi çalıştırıyoruz
+# 🟢 Screen açıp nodemizi çalıştırıyoruz
 * Nodeismi yazan yere validator olarak görünmesini istediğiniz ismi yazın.  
 * Yükleme biraz uzun sürecek Screenden 'ctrl a d' tuşları ile çıkış yapalım. 
 * Daha sonra açtığımız screene girmemiz gerekirse screen -r aleph  ile giriş yapabilirsiniz.
