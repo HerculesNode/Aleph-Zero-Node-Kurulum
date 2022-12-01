@@ -1,5 +1,14 @@
 ##  AlephZero Kurulum Rehberi
 
+<h1 align="center"> <img src="https://raw.githubusercontent.com/herculessx/Aleph-Zero-Node-Kurulum/main/A0_Website_OG_Generic.jpg" width="650"></h1>
+
+# 🟢 Minimum Sistem Gereksinimleri
+
+* `6 Cpu`
+* `16 Gb Ram`
+* `800 gb SSD`
+
+
 # 🟢 ilk olarak Güncelleme yapacağız.
 ```
 sudo apt update && sudo apt upgrade -y
@@ -29,9 +38,9 @@ screen -S aleph
 ```
 ./run_node.sh -n NODEİSMİ --ip SUNUCUIPADRESİ
 ```
-* Bu kısımda yükleme başladıysa ctrl a d ile screen den çıkın. Boş yere beklemeyin 4-5 saat sürüyor kurulum aşaması :D 
+* Bu kısımda yükleme başladıysa ctrl a d ile screen den çıkın. Boş yere beklemeyin 4-5 saat sürüyor kurulum aşaması. 
 
-* Kurulum tamamlandıktan sonra 'Are you sure you want to skip the session keys check? [y/N]y' şeklinde bir soru soracak  Y' ya basıp enter diyelim. 
+* Kurulum tamamlandıktan sonra `Are you sure you want to skip the session keys check` diye soru soracak Y tuşuna basalım
 
 ## 🟢 Buradan sonraki kısımlar için screen içine girmenize gerek yok. Sunucuya bağlandığınızda aleph-node-runner klasörü içine girerek işlem yapmanız yeterli.
 ```
@@ -45,14 +54,18 @@ docker logs --follow NODEİSMİ
 ```
 ./signer.sh
 ```
-## 🟢 Cüzdan oluşturuyoruz. ( Cüzdanınız varsa eğer onu kullanabilirsiniz) İki tane cüzdan oluşturun ve ikisiyle de faucetten token alın. Sonra 2. cüzdandan aldığınız tokeni diğer cüzdana atıp silebilirsiniz.
+## 🟢 Cüzdan oluşturuyoruz. ( Cüzdanınız varsa eğer onu kullanabilirsiniz) İki tane `cüzdan oluşturun` ve ikisiyle de faucetten token alın. Sonra 2. cüzdandan aldığınız tokeni diğer cüzdana atıp silebilirsiniz.
+<br>
 https://test.azero.dev/#/accounts sayfasına gidiyoruz ve 'add account' diyerek cüzdan oluşturuyoruz. Cüzdanlardan birini silebilirsiniz onu token almak için kullandık validator için tek cüzdan yeterli.
 ### Faucet
 https://faucet.test.azero.dev/ Günlük 25k token alabiliyorsunuz. Burada 2 cüzdanla token alıp fazladan aldığınız 25k tokeni validator oluşturacağınız cüzdanınıza göndermenizi tavsiye ederim.
 
 ## 🟢 Validator başvuru yapıyoruz
 https://validators.alephzero.org/
-Siteye gidiyoruz ve mail adresimizi yazıyoruz ve maile gelen kodu girerek oturum açıyoruz.  Validator adı ve  sosyal medya hesaplarımızı falan istiyor. Validator adı kısmına kısmına node kurarken kullandığımız ismi kullanalım ve discord bilgisini doğru girelim, onay verilen validatorlere testnet rolü verilecek. Diğer bilgileri istediğiniz gibi ayarlayın.Bu bilgileri aldıktan sonra ' Become a Validator' kısmında 'Apply' tuşuna basıyoruz.  6. adımda aldığımız çıktıdaki bilgileri burada kullanıyoruz. Stash account kısmına kullanacağınız cüzdan adresini yazın.
+* Siteye gidiyoruz ve mail adresimizi yazıyoruz ve maile gelen kodu girerek oturum açıyoruz.  
+* Validator adı ve  sosyal medya hesaplarımızı falan istiyor. 
+* Validator adı kısmına kısmına node kurarken kullandığımız ismi kullanalım ve discord bilgisini doğru girelim, onay verilen validatorlere testnet rolü verilecek. 
+* Diğer bilgileri istediğiniz gibi ayarlayın.Bu bilgileri aldıktan sonra ' Become a Validator' kısmında 'Apply' tuşuna basıyoruz.  6. adımda aldığımız çıktıdaki bilgileri burada kullanıyoruz. Stash account kısmına kullanacağınız cüzdan adresini yazın.
 
 ## 🟢 Doğrulama İşlemleri(bu doğrulamaları yapmazsanız başvurunuz reddedilir).
 ### Telemetry de Node ismin görünecek. (kurulum yaparken açık oluyor zaten kontrol edersiniz)
@@ -71,8 +84,8 @@ Sunucumuza bağlanıp aşağıdaki komutu giriyoruz.
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys"}' http://127.0.0.1:9933
 ```
 
-Aldığımız çıktı şu şekilde olacak;
-{"jsonrpc":"2.0","result":"0xa8bccfe29da88f256545d2addc194b734f615cec70b99845d56384e0c0c2fe64de211d8dd724dece2b3bc26c3250c550b644fb586c0875693ee1099c13feb806
+Aldığımız çıktı bunun gibi gözükmeli
+{"jsonrpc":"2.0","result":"0xa8bccfe29da88f256545d2addc194b734f615cec70b99845d56384e0csadasdaswqwqe5454542184542121245421212
 
 Çıktıyı not almayı unutmayın 0x le başlayan kısım bizim anahtarımız!!!
 https://test.azero.dev/#/staking/actions   cüzdanımızın sağ tarafındaki 'set session key' tuşuna basarak sunucumuzdan aldığımız 0x li anahtarı giriyoruz ve onaylıyoruz.
