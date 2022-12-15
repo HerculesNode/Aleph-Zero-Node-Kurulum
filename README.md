@@ -2,6 +2,9 @@
 
 <h1 align="center"> <img src="https://raw.githubusercontent.com/herculessx/Aleph-Zero-Node-Kurulum/main/A0_Website_OG_Generic.jpg" width="650"></h1>
 
+# 🟢 Linkler
+ * [Yeni Node Testnet Telegram Kanalı](https://t.me/HerculesNode)
+
 # 🟢 Minimum Sistem Gereksinimleri
 
 * `6 Cpu`
